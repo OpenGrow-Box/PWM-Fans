@@ -6,7 +6,7 @@ from airCtrl import PWMCtrl
 
 
 app = Flask(__name__)
-AirController = PWMCtrl(1000,18,5)
+AirController = PWMCtrl(1000,18,50)
 #Setup and Run AirController
 AirController.StartPwm()
 
