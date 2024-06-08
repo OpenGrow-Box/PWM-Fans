@@ -3,11 +3,11 @@ Description=Ruck EC PWM Controll Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/SmartHome/YOURDIR/api.py
-WorkingDirectory=/home/pi/SmartHome/YOURDIRl
+ExecStart=/usr/bin/python3 /opt/ruckecapi/api.py
+WorkingDirectory=/opt/ruckecapi/
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=airctl
+SyslogIdentifier="Ruck EC WEB-Api"
 Restart=always
 
 [Install]
