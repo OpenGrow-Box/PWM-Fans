@@ -24,8 +24,8 @@ class PWMCtrl:
         self.pwmCtrl  = None
         self.StartTime = datetime.now()
 
-        self.Pwm_Min:int = 5
-        self.Pwm_Max:int = 100
+        self.Pwm_Min:int = 10
+        self.Pwm_Max:int = 95
 
         pass
 
@@ -62,8 +62,8 @@ class PWMCtrl:
     def ChangePwmDuty(self,newDuty:int):
         if self.isRunning:
             # Stelle sicher, dass newDuty nicht unter 5 fällt
-            if newDuty < 5:
-                newDuty = 5
+            if newDuty < 10:
+                newDuty = 10
             # Stelle sicher, dass newDuty nicht über 95 steigt
             elif newDuty > 95:
                 newDuty = 95
