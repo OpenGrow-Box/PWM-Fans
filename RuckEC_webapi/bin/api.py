@@ -24,7 +24,7 @@ def InfoPage():
 @app.route("/air/start", methods=['POST'])
 def PwmStarter():
     if not AirController.isRunning:
-        AirController.start_pwm()
+        AirController.StartPwm()
         data_set = {
             'Message': 'Fan is started',
             'Time': datetime.now(),
@@ -42,7 +42,7 @@ def PwmStarter():
 @app.route("/air/stop", methods=['POST'])
 def PwmStoper():
     if AirController.isRunning:
-        AirController.stop_pwm()
+        AirController.StopPwm()
         data_set = {
             'Message': 'Fan is stopped',
             'Time': datetime.now(),
