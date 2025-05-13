@@ -63,4 +63,4 @@ def PwmChange():
         return jsonify({'Result':'Success','NewDutyCycle':int(NewDuty)})
     return jsonify({'Result':'Error Not Running','NewDutyCycle':int(NewDuty)})
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5533,debug=True)
+    app.run(host='0.0.0.0',port=5533)
